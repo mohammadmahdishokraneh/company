@@ -21,3 +21,15 @@ ostream &operator<<(ostream &strm, Employee &obj) {
     return strm;
 }//output operator
 
+istream &operator>>(istream &strm, Employee &employee) {
+    strm >> static_cast<Person &>(employee);
+    cout << "hourWork: ";
+    strm >> employee.hourWork;
+    cout << "salaryPerHour: ";
+    strm >> employee.salaryPerHour;
+    cout << "workToDo: ";
+    strm >> employee.workToDo;
+    cout << "workDone: ";
+    strm >> employee.workDone;
+    return strm;
+}
