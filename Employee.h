@@ -19,6 +19,18 @@ public:
     friend istream& operator >> (istream&, Employee&);//input operator
 
     Employee& operator = (const Employee&);//assignment operator
+
+    int getHourWork() const;//getter
+    void setHourWork(int hourWork);//setter
+
+    int getSalaryPerHour() const;//getter
+    void setSalaryPerHour(int salaryPerHour);//setter
+
+    int getWorkToDo() const;//getter
+    void setWorkToDo(int workToDo);//setter
+
+    int getWorkDone() const;//getter
+    void setWorkDone(int workDone);//setter
 };
 
 #endif //SOAL_2_EMPLOYEE_H

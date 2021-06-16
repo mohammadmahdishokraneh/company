@@ -42,3 +42,35 @@ Employee &Employee::operator=(const Employee &employee) {
     workDone = employee.workDone;
     return *this;
 }//assignment operator
+
+int Employee::getHourWork() const {
+    return hourWork;
+}//getter
+
+void Employee::setHourWork(int hourWork) {
+    Employee::hourWork = hourWork;
+}//setter
+
+int Employee::getSalaryPerHour() const {
+    return salaryPerHour;
+}//getter
+
+void Employee::setSalaryPerHour(int salaryPerHour) {
+    Employee::salaryPerHour = salaryPerHour;
+}//setter
+
+int Employee::getWorkToDo() const {
+    return workToDo;
+}//getter
+
+void Employee::setWorkToDo(int workToDo) {
+    Employee::workToDo = workToDo;
+}//setter
+
+int Employee::getWorkDone() const {
+    return workDone;
+}//getter
+
+void Employee::setWorkDone(int workDone) {
+    Employee::workDone = workDone;
+}//setter
