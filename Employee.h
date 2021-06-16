@@ -31,6 +31,8 @@ public:
 
     int getWorkDone() const;//getter
     void setWorkDone(int workDone);//setter
+
+    bool validate();//id is valid
 };
 
 #endif //SOAL_2_EMPLOYEE_H

@@ -30,7 +30,7 @@ public:
 
     Person& operator=(const Person&);//assignment operator
 
-    bool validate();//id is valid
+    virtual bool validate();//id is valid
 };
 
 #endif //SOAL_2_PERSON_H

@@ -74,3 +74,15 @@ int Employee::getWorkDone() const {
 void Employee::setWorkDone(int workDone) {
     Employee::workDone = workDone;
 }//setter
+
+bool Employee::validate() {
+    char id1[10];
+    strcpy(id1, id.c_str());
+
+    if (id1[2] != '*') {
+        cout << "invalid id" << endl;
+        exit(0);
+    }
+
+    return Person::validate(id1);
+}//id is valid
