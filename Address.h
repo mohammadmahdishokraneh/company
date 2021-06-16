@@ -1,5 +1,10 @@
-#ifndef SOAL_2_ADDRESS_H
-#define SOAL_2_ADDRESS_H
+#ifndef ADDRESS_H
+#define ADDRESS_H
+
+#include <iostream>
+#include <cstring>
+
+using namespace std;
 
 class Address {
 private:
@@ -7,23 +12,21 @@ private:
     string city;
     string street;
 public:
-    Address(const string &country, const string &city, const string &street);
+    Address();//constructor no_arg
+    Address(const string &country, const string &city, const string &street);//constructor
+    Address(const Address&);
 
-    friend ostream &operator<<(ostream &, Address &);
+    friend ostream &operator<<(ostream &, Address &);//output operator
+    friend istream &operator>>(istream &, Address &);//input operator
 
-    friend ostream &operator>>(ostream &, Address &);
+    [[nodiscard]] const string &getCountry() const;//getter
+    void setCountry(const string &country);//setter
 
-    [[nodiscard]] const string &getCountry() const;
+    [[nodiscard]] const string &getCity() const;//getter
+    void setCity(const string &city);//setter
 
-    void setCountry(const string &country);
-
-    [[nodiscard]] const string &getCity() const;
-
-    void setCity(const string &city);
-
-    [[nodiscard]] const string &getStreet() const;
-
-    void setStreet(const string &street);
+    [[nodiscard]] const string &getStreet() const;//getter
+    void setStreet(const string &street);//setter
 };
 
-#endif //SOAL_2_ADDRESS_H
+#endif //ADDRESS_H

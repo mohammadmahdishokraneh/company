@@ -1,1 +1,1 @@
-/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/soal_2.dir/main.cpp.o CMakeFiles/soal_2.dir/Address.cpp.o CMakeFiles/soal_2.dir/Person.cpp.o -o soal_2.exe -Wl,--out-implib,libsoal_2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/soal_2.dir/main.cpp.o CMakeFiles/soal_2.dir/Address.cpp.o CMakeFiles/soal_2.dir/Person.cpp.o CMakeFiles/soal_2.dir/Employee.cpp.o -o soal_2.exe -Wl,--out-implib,libsoal_2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
