@@ -169,6 +169,33 @@ Address.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/soal_2.dir/build.make CMakeFiles/soal_2.dir/Address.cpp.s
 .PHONY : Address.cpp.s
 
+Boss.o: Boss.cpp.o
+
+.PHONY : Boss.o
+
+# target to build an object file
+Boss.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/soal_2.dir/build.make CMakeFiles/soal_2.dir/Boss.cpp.o
+.PHONY : Boss.cpp.o
+
+Boss.i: Boss.cpp.i
+
+.PHONY : Boss.i
+
+# target to preprocess a source file
+Boss.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/soal_2.dir/build.make CMakeFiles/soal_2.dir/Boss.cpp.i
+.PHONY : Boss.cpp.i
+
+Boss.s: Boss.cpp.s
+
+.PHONY : Boss.s
+
+# target to generate assembly for a file
+Boss.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/soal_2.dir/build.make CMakeFiles/soal_2.dir/Boss.cpp.s
+.PHONY : Boss.cpp.s
+
 Employee.o: Employee.cpp.o
 
 .PHONY : Employee.o
@@ -262,6 +289,9 @@ help:
 	@echo "... Address.o"
 	@echo "... Address.i"
 	@echo "... Address.s"
+	@echo "... Boss.o"
+	@echo "... Boss.i"
+	@echo "... Boss.s"
 	@echo "... Employee.o"
 	@echo "... Employee.i"
 	@echo "... Employee.s"

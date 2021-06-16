@@ -1,5 +1,5 @@
-#ifndef SOAL_2_EMPLOYEE_H
-#define SOAL_2_EMPLOYEE_H
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
 
 #include "Person.h"
 
@@ -39,4 +39,4 @@ public:
     int efficiency();//employee's efficient
 };
 
-#endif //SOAL_2_EMPLOYEE_H
+#endif //EMPLOYEE_H

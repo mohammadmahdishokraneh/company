@@ -1,5 +1,5 @@
-#ifndef SOAL_2_PERSON_H
-#define SOAL_2_PERSON_H
+#ifndef PERSON_H
+#define PERSON_H
 
 #include <iostream>
 #include "Address.h"
@@ -33,4 +33,4 @@ public:
     virtual bool validate();//id is valid
 };
 
-#endif //SOAL_2_PERSON_H
+#endif //PERSON_H
