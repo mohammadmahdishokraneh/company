@@ -1,0 +1,3 @@
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/soal_2.dir
