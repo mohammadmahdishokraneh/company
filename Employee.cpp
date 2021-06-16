@@ -91,3 +91,7 @@ int Employee::calculateSalary() {
     return hourWork*salaryPerHour-(hourWork*salaryPerHour*workDone/workToDo);
 }//calculate employee's salary
 
+int Employee::efficiency() {
+    return (workDone*100/workToDo)/hourWork;
+}//employee's efficient
+
