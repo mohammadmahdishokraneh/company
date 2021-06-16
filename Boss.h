@@ -8,9 +8,11 @@ private:
     int numberOfEmployees;
 public:
     Boss();//constructor no_arg
-    Boss(const string &string, const string &string1, const Address &address, int hourWork, int salaryPerHour,
-         int workToDo, int workDone, int numberOfEmployees);//constructor
+    Boss(const string &, const string &, const Address &, int, int, int, int, int);//constructor
     Boss(const Boss&);//copy constructor
+
+    friend ostream& operator << (ostream&, const Boss&);//output operator
+    friend istream& operator >> (istream&, Boss&);//input operator
 };
 
 #endif //BOSS_H

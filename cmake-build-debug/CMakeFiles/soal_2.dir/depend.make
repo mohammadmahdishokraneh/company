@@ -4,6 +4,12 @@
 CMakeFiles/soal_2.dir/Address.cpp.o: ../Address.cpp
 CMakeFiles/soal_2.dir/Address.cpp.o: ../Address.h
 
+CMakeFiles/soal_2.dir/Boss.cpp.o: ../Address.h
+CMakeFiles/soal_2.dir/Boss.cpp.o: ../Boss.cpp
+CMakeFiles/soal_2.dir/Boss.cpp.o: ../Boss.h
+CMakeFiles/soal_2.dir/Boss.cpp.o: ../Employee.h
+CMakeFiles/soal_2.dir/Boss.cpp.o: ../Person.h
+
 CMakeFiles/soal_2.dir/Employee.cpp.o: ../Address.h
 CMakeFiles/soal_2.dir/Employee.cpp.o: ../Employee.cpp
 CMakeFiles/soal_2.dir/Employee.cpp.o: ../Employee.h

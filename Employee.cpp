@@ -1,45 +1,45 @@
 #include "Employee.h"
 
-Employee::Employee() : Person() {hourWork = 0; salaryPerHour = 0; workToDo = 0; workDone = 0; validate()}//constructor no_arg
+Employee::Employee() : Person() {hourWork = 0; salaryPerHour = 0; workToDo = 0; workDone = 0; validate();}//constructor no_arg
 
-Employee::Employee(const string &string, const string &string1, const Address &address, int hourWork, int salaryPerHour,
-                   int workToDo, int workDone) : Person(string, string1, address), hourWork(hourWork),
-                                                 salaryPerHour(salaryPerHour), workToDo(workToDo), workDone(workDone) {validate()}
+Employee::Employee(const std::basic_string<char> &name, const std::basic_string<char> &id, const Address &address, int hourWork, int salaryPerHour,
+                   int workToDo, int workDone) : Person(name, id, address), hourWork(hourWork),
+                                                 salaryPerHour(salaryPerHour), workToDo(workToDo), workDone(workDone) {validate();}
 //constructor
 
-Employee::Employee(const Employee &obj) : Person(Employee) {
+Employee::Employee(const Employee &obj) : Person(obj) {
     this->hourWork = obj.hourWork;
     this->salaryPerHour = obj.salaryPerHour;
     this->workToDo = obj.workToDo;
     this->workDone = obj.workDone;
 }//copy constructor
 
-ostream &operator<<(ostream &strm, Employee &obj) {
-    strm << static_cast<const Person &>(employee);
+ostream &operator<<(ostream &strm, const Employee &obj) {
+    strm << static_cast<const Person &>(obj);
     strm << "hourWork: " << obj.hourWork << "\nsalaryPerHour: " << obj.salaryPerHour << "\nworkToDo: " <<
     obj.workToDo << "\nworkDone" << obj.workDone << endl;
     return strm;
 }//output operator
 
-istream &operator>>(istream &strm, Employee &employee) {
-    strm >> static_cast<Person &>(employee);
+istream &operator>>(istream &strm, Employee &obj) {
+    strm >> static_cast<Person &>(obj);
     cout << "hourWork: ";
-    strm >> employee.hourWork;
+    strm >> obj.hourWork;
     cout << "salaryPerHour: ";
-    strm >> employee.salaryPerHour;
+    strm >> obj.salaryPerHour;
     cout << "workToDo: ";
-    strm >> employee.workToDo;
+    strm >> obj.workToDo;
     cout << "workDone: ";
-    strm >> employee.workDone;
+    strm >> obj.workDone;
     return strm;
 }//input operator
 
-Employee &Employee::operator=(const Employee &employee) {
-    Person::operator=(employee);
-    hourWork = employee.hourWork;
-    salaryPerHour = employee.salaryPerHour;
-    workToDo = employee.workToDo;
-    workDone = employee.workDone;
+Employee &Employee::operator=(const Employee &obj) {
+    Person::operator=(obj);
+    hourWork = obj.hourWork;
+    salaryPerHour = obj.salaryPerHour;
+    workToDo = obj.workToDo;
+    workDone = obj.workDone;
     return *this;
 }//assignment operator
 

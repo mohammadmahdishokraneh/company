@@ -11,11 +11,10 @@ private:
     int workDone;
 public:
     Employee();//constructor no_arg
-    Employee(const string &string, const string &string1, const Address &address, int hourWork, int salaryPerHour,
-             int workToDo, int workDone);//constructor
+    Employee(const string &, const string &, const Address &, int, int, int, int );//constructor
     Employee(const Employee &);//copy constructor
 
-    friend ostream& operator << (ostream&, Employee&);//output operator
+    friend ostream& operator << (ostream&, const Employee&);//output operator
     friend istream& operator >> (istream&, Employee&);//input operator
 
     Employee& operator = (const Employee&);//assignment operator
