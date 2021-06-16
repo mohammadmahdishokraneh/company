@@ -15,8 +15,10 @@ public:
              int workToDo, int workDone);//constructor
     Employee(const Employee &);//copy constructor
 
-    friend ostream& operator << (ostream&, Employee&);
-    friend istream& operator >> (istream&, Employee&);
+    friend ostream& operator << (ostream&, Employee&);//output operator
+    friend istream& operator >> (istream&, Employee&);//input operator
+
+    Employee& operator = (const Employee&);//assignment operator
 };
 
 #endif //SOAL_2_EMPLOYEE_H

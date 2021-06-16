@@ -32,4 +32,13 @@ istream &operator>>(istream &strm, Employee &employee) {
     cout << "workDone: ";
     strm >> employee.workDone;
     return strm;
-}
+}//input operator
+
+Employee &Employee::operator=(const Employee &employee) {
+    Person::operator=(employee);
+    hourWork = employee.hourWork;
+    salaryPerHour = employee.salaryPerHour;
+    workToDo = employee.workToDo;
+    workDone = employee.workDone;
+    return *this;
+}//assignment operator
