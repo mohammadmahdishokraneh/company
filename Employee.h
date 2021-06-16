@@ -3,15 +3,17 @@
 
 #include "Person.h"
 
-class Employee : public Person{
+class Employee : public Person {
 private:
     int hourWork;
     int salaryPerHour;
     int workToDo;
     int workDone;
 public:
+    Employee();//constructor no_arg
     Employee(const string &string, const string &string1, const Address &address, int hourWork, int salaryPerHour,
-             int workToDo, int workDone);
+             int workToDo, int workDone);//constructor
+    Employee(const Employee &);//copy constructor
 };
 
 #endif //SOAL_2_EMPLOYEE_H
