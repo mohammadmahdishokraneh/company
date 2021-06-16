@@ -16,7 +16,7 @@ Person::Person(const Person &obj) {
 }//copy constructor
 
 ostream &operator<<(ostream &strm, Person &obj) {
-    strm << "name: " << obj.name << "id: " << obj.id << "address: " << obj.address << endl;
+    strm << "name: " << obj.name << "\nid: " << obj.id << "\naddress: " << obj.address << endl;
     return strm;
 }//output operator
 

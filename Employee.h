@@ -14,6 +14,9 @@ public:
     Employee(const string &string, const string &string1, const Address &address, int hourWork, int salaryPerHour,
              int workToDo, int workDone);//constructor
     Employee(const Employee &);//copy constructor
+
+    friend ostream& operator << (ostream&, Employee&);
+    friend istream& operator >> (istream&, Employee&);
 };
 
 #endif //SOAL_2_EMPLOYEE_H

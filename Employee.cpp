@@ -7,9 +7,17 @@ Employee::Employee(const string &string, const string &string1, const Address &a
                                                  salaryPerHour(salaryPerHour), workToDo(workToDo), workDone(workDone) {}
 //constructor
 
-Employee::Employee(const Employee &obj) {
+Employee::Employee(const Employee &obj) : Person(Employee) {
     this->hourWork = obj.hourWork;
     this->salaryPerHour = obj.salaryPerHour;
     this->workToDo = obj.workToDo;
     this->workDone = obj.workDone;
 }//copy constructor
+
+ostream &operator<<(ostream &strm, Employee &obj) {
+    strm << static_cast<const Person &>(employee);
+    strm << "hourWork: " << obj.hourWork << "\nsalaryPerHour: " << obj.salaryPerHour << "\nworkToDo: " <<
+    obj.workToDo << "\nworkDone" << obj.workDone << endl;
+    return strm;
+}//output operator
+
