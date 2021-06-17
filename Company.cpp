@@ -141,5 +141,9 @@ bool Company::isEnoughBudget() {
 }//check the budget
 
 void Company::toSave() {
-
+    ofstream save("company.txt");
+    for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
+        save << this->employees[i]->getName() << this->employees[i]->getId() << this->employees[i]->efficiency() <<
+             this->employees[i]->calculateSalary();
+    }
 }//save information

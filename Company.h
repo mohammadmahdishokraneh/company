@@ -1,6 +1,7 @@
 #ifndef COMPANY_H
 #define COMPANY_H
 
+#include <fstream>
 #include "Boss.h"
 
 class Company {
