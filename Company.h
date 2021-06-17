@@ -26,6 +26,8 @@ public:
     void setEmployees(Employee **employees);//setter
 
     Employee& maxEfficiency();//find the most efficient employee
+
+    double averageEfficiency();//average efficiency of employees
 };
 
 #endif //COMPANY_H

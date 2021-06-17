@@ -85,3 +85,11 @@ Employee &Company::maxEfficiency() {
     }
     return *this->employees[0];
 }//find the most efficient employee
+
+double Company::averageEfficiency() {
+    double average = 0;
+    for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
+        average += this->employees[i]->efficiency();
+    }
+    return average / this->boss->getNumberOfEmployees();
+}//average efficiency of employees
