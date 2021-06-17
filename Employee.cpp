@@ -90,3 +90,9 @@ int Employee::efficiency() {
     return (workDone * 100 / workToDo) / hourWork;
 }//employee's efficient
 
+bool operator==(const Employee &obj1, const Employee &obj2) {
+    if (obj1.hourWork == obj2.hourWork && obj1.salaryPerHour == obj2.salaryPerHour
+    && obj1.workToDo == obj2.workToDo && obj1.workDone == obj2.workDone)
+        return (static_cast<const Person&>(obj1) == static_cast<const Person&>(obj2));
+    return false;
+}//check equality

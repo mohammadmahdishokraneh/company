@@ -93,3 +93,22 @@ double Company::averageEfficiency() {
     }
     return average / this->boss->getNumberOfEmployees();
 }//average efficiency of employees
+
+//void Company::changeBoss() {
+//    if (this->boss->efficiency() < 40){
+//        Employee employee = this->maxEfficiency();
+//
+//    }
+//}
+
+void Company::gift() {
+    for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
+        char * ch= new char[10];
+        strcpy(ch, this->employees[i]->getId().c_str());
+        if (ch[0] == '8')
+            this->employees[i]->setHourWork(this->employees[i]->getHourWork()+5);
+        if (*this->employees[i] == this->maxEfficiency())
+            this->employees[i]->setHourWork(this->employees[i]->getHourWork()+10);
+        delete[] ch;
+    }
+}//gift for employees

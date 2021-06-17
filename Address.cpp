@@ -48,3 +48,11 @@ const string &Address::getStreet() const {
 void Address::setStreet(const string &street) {
     Address::street = street;
 }//setter
+
+bool operator==(const Address &obj1, const Address &obj2) {
+    if (strcmp(obj1.country.c_str(), obj2.country.c_str()) == 0 &&
+            strcmp(obj1.city.c_str(), obj2.city.c_str()) == 0 &&
+            strcmp(obj1.street.c_str(), obj2.street.c_str()) == 0)
+        return true;
+    return false;
+}//check equality

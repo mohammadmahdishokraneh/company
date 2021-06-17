@@ -95,3 +95,10 @@ bool Person::validate() {
     delete[] ch;
     return true;
 }//id is valid
+
+bool operator==(const Person &obj1, const Person &obj2) {
+    if (strcmp(obj1.name.c_str(), obj2.name.c_str()) == 0 &&
+            strcmp(obj1.id.c_str(), obj2.id.c_str()) == 0 )
+        return (obj1.address == obj2.address);
+    return false;
+}//check equality

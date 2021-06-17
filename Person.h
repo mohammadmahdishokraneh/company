@@ -27,6 +27,8 @@ public:
     Person &operator=(const Person &);//assignment operator
 
     virtual bool validate();//id is valid
+
+    friend bool operator==(const Person &, const Person &);//check equality
 };
 
 #endif //PERSON_H

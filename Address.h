@@ -26,6 +26,8 @@ public:
 
     [[nodiscard]] const string &getStreet() const;//getter
     void setStreet(const string &street);//setter
+
+    friend bool operator==(const Address &, const Address &);//check equality
 };
 
 #endif //ADDRESS_H

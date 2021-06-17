@@ -28,6 +28,10 @@ public:
     Employee& maxEfficiency();//find the most efficient employee
 
     double averageEfficiency();//average efficiency of employees
+
+//    void  changeBoss();
+
+    void gift();//gift for employees
 };
 
 #endif //COMPANY_H

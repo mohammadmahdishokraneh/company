@@ -35,6 +35,8 @@ public:
     virtual int calculateSalary();//calculate employee's salary
 
     int efficiency();//employee's efficient
+
+    friend bool operator==(const Employee &, const Employee &);//check equality
 };
 
 #endif //EMPLOYEE_H
