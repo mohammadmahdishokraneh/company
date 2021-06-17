@@ -9,6 +9,7 @@ private:
     string id;
     Address address;
 public:
+    Person();//constructor no_arg
     Person(const string &, const string &, const Address &);//constructor
     Person(const Person &);//copy constructor
 

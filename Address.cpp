@@ -4,13 +4,13 @@ Address::Address() {
     country = "";
     city = "";
     street = "";
-}
+}//constructor no_arg
 
 Address::Address(const string &country, const string &city, const string &street) :
         country(country), city(city), street(street) {}
 //constructor
 
-Address::Address(const Address&obj) {
+Address::Address(const Address &obj) {
     this->country = obj.country;
     this->city = obj.city;
     this->street = obj.street;
@@ -57,8 +57,8 @@ void Address::setStreet(const string &street) {
 
 bool operator==(const Address &obj1, const Address &obj2) {
     if (strcmp(obj1.country.c_str(), obj2.country.c_str()) == 0 &&
-            strcmp(obj1.city.c_str(), obj2.city.c_str()) == 0 &&
-            strcmp(obj1.street.c_str(), obj2.street.c_str()) == 0)
+        strcmp(obj1.city.c_str(), obj2.city.c_str()) == 0 &&
+        strcmp(obj1.street.c_str(), obj2.street.c_str()) == 0)
         return true;
     return false;
 }//check equality

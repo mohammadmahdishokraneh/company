@@ -12,11 +12,27 @@ iostream
 cstring
 -
 
-/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Person.cpp
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Boss.h
+Employee.h
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Employee.h
+
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Company.h
+fstream
+-
+Boss.h
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Boss.h
+
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Employee.h
 Person.h
 /cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Person.h
 
 /cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Person.h
 Address.h
 /cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Address.h
+
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/main.cpp
+iostream
+-
+Company.h
+/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Company.h
 

@@ -12,7 +12,7 @@ private:
     string city;
     string street;
 public:
-    Address();
+    Address();//constructor no_arg
     Address(const string &, const string &, const string &);//constructor
     Address(const Address &);
 

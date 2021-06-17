@@ -2,15 +2,15 @@
 
 Boss::Boss(const string &name, const string &id, const Address &address,
            int hourWork, int salaryPerHour, int workToDo, int workDone, int numberOfEmployees) :
-           Employee(name, id, address, hourWork, salaryPerHour, workToDo, workDone),
-           numberOfEmployees(numberOfEmployees) {}//constructor
+        Employee(name, id, address, hourWork, salaryPerHour, workToDo, workDone),
+        numberOfEmployees(numberOfEmployees) {}//constructor
 
 Boss::Boss(const Boss &obj) : Employee(static_cast<const Employee &>(obj)) {
     numberOfEmployees = obj.numberOfEmployees;
 }//copy constructor
 
 ostream &operator<<(ostream &strm, const Boss &obj) {
-    strm << static_cast<const Employee &>(obj)<< endl;
+    strm << static_cast<const Employee &>(obj) << endl;
     strm << "number of employee: " << obj.numberOfEmployees;
     return strm;
 }//output operator
@@ -41,5 +41,5 @@ int Boss::calculateSalary() {
     int salaryPerHour = this->getSalaryPerHour();
     int workDone = this->getWorkDone();
     int workToDo = this->getWorkToDo();
-    return hourWork*salaryPerHour*((workDone*100/workToDo)+15)/100;
+    return hourWork * salaryPerHour * ((workDone * 100 / workToDo) + 15) / 100;
 }//calculate employee's salary

@@ -21,16 +21,16 @@ public:
     void setBudget(int budget);//setter
 
     Boss getBoss() const;//getter
-    void setBoss(Boss& boss);//setter
+    void setBoss(Boss &boss);//setter
 
     Employee **getEmployees() const;//getter
     void setEmployees(Employee **employees);//setter
 
-    Employee& maxEfficiency();//find the most efficient employee
+    Employee &maxEfficiency();//find the most efficient employee
 
     double averageEfficiency();//average efficiency of employees
 
-    void  changeOfBoss();//replace the boss with the best employee
+    void changeOfBoss();//replace the boss with the best employee
 
     void gift();//gift for employees
 

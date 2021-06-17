@@ -1,5 +1,10 @@
 #include "Person.h"
 
+Person::Person() : address() {
+    name = "";
+    id = "";
+}//constructor no_arg
+
 Person::Person(const string &name, const string &id, const Address &address) :
         name(name), id(id), address(address) { validate(); }//constructor
 
@@ -98,7 +103,7 @@ bool Person::validate() {
 
 bool operator==(const Person &obj1, const Person &obj2) {
     if (strcmp(obj1.name.c_str(), obj2.name.c_str()) == 0 &&
-            strcmp(obj1.id.c_str(), obj2.id.c_str()) == 0 )
+        strcmp(obj1.id.c_str(), obj2.id.c_str()) == 0)
         return (obj1.address == obj2.address);
     return false;
 }//check equality
