@@ -10,13 +10,13 @@ private:
     int workToDo;
     int workDone;
 public:
-    Employee(const string &, const string &, const Address &, int, int, int, int );//constructor
+    Employee(const string &, const string &, const Address &, int, int, int, int);//constructor
     Employee(const Employee &);//copy constructor
 
-    friend ostream& operator << (ostream&, const Employee&);//output operator
-    friend istream& operator >> (istream&, Employee&);//input operator
+    friend ostream &operator<<(ostream &, const Employee &);//output operator
+    friend istream &operator>>(istream &, Employee &);//input operator
 
-    Employee& operator = (const Employee&);//assignment operator
+    Employee &operator=(const Employee &);//assignment operator
 
     int getHourWork() const;//getter
     void setHourWork(int hourWork);//setter

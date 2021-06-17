@@ -17,3 +17,11 @@ Company::Company(const Company &obj) {
         this->employees[i] = new Employee(*obj.employees[i]);
     }
 }//copy constructor
+
+Company::~Company() {
+    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+        delete[] employees[i];
+    }
+    delete[] employees;
+    delete boss;
+}//destructor

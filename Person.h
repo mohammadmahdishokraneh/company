@@ -24,7 +24,7 @@ public:
     const Address &getAddress() const;//getter
     void setAddress(const Address &);//setter
 
-    Person& operator=(const Person&);//assignment operator
+    Person &operator=(const Person &);//assignment operator
 
     virtual bool validate();//id is valid
 };

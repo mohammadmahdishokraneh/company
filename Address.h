@@ -13,7 +13,7 @@ private:
     string street;
 public:
     Address(const string &, const string &, const string &);//constructor
-    Address(const Address&);
+    Address(const Address &);
 
     friend ostream &operator<<(ostream &, const Address &);//output operator
     friend istream &operator>>(istream &, Address &);//input operator

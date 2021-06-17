@@ -1,7 +1,7 @@
 #include "Person.h"
 
 Person::Person(const string &name, const string &id, const Address &address) :
-        name(name), id(id), address(address) {validate();}//constructor
+        name(name), id(id), address(address) { validate(); }//constructor
 
 //Person::Person(const Person &obj) {
 //    setName(obj.name);
@@ -58,10 +58,10 @@ Person &Person::operator=(const Person &obj) {
 }//assignment operator
 
 bool Person::validate() {
-    char* ch = new char[10];
+    char *ch = new char[10];
     strcpy(ch, id.c_str());
 
-    if (id.length()<8 || id.length()>10){
+    if (id.length() < 8 || id.length() > 10) {
         cout << "invalid id" << endl;
         delete[] ch;
         exit(0);
@@ -71,22 +71,22 @@ bool Person::validate() {
         delete[] ch;
         exit(0);
     }
-    if (ch[0] == '8'){
-        if (ch[1]< '4' || ch[1]>'9'){
+    if (ch[0] == '8') {
+        if (ch[1] < '4' || ch[1] > '9') {
             cout << "invalid id" << endl;
             delete[] ch;
             exit(0);
         }
     }
-    for (int i = id.length()-1; i > id.length()-6; --i) {
-        if (ch[i] >= '4' && ch[i] <= '6' && ch[i] > '9' && ch[i] < '0'){
+    for (int i = id.length() - 1; i > id.length() - 6; --i) {
+        if (ch[i] >= '4' && ch[i] <= '6' && ch[i] > '9' && ch[i] < '0') {
             cout << "invalid id" << endl;
             delete[] ch;
             exit(0);
         }
     }
-    for (int i = id.length()-6; i > 1; --i) {
-        if (ch[i] > '0' && ch[i] < '9'){
+    for (int i = id.length() - 6; i > 1; --i) {
+        if (ch[i] > '0' && ch[i] < '9') {
             cout << "invalid id" << endl;
             delete[] ch;
             exit(0);

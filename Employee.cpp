@@ -2,7 +2,8 @@
 
 Employee::Employee(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour,
                    int workToDo, int workDone) : Person(name, id, address), hourWork(hourWork),
-                                                 salaryPerHour(salaryPerHour), workToDo(workToDo), workDone(workDone) {validate();}
+                                                 salaryPerHour(salaryPerHour), workToDo(workToDo),
+                                                 workDone(workDone) { validate(); }
 //constructor
 
 Employee::Employee(const Employee &obj) : Person(static_cast<const Person &>(obj)) {
@@ -15,7 +16,7 @@ Employee::Employee(const Employee &obj) : Person(static_cast<const Person &>(obj
 ostream &operator<<(ostream &strm, const Employee &obj) {
     cout << static_cast<const Person &>(obj) << endl;
     strm << "hourWork: " << obj.hourWork << "\nsalaryPerHour: " << obj.salaryPerHour << "\nworkToDo: " <<
-    obj.workToDo << "\nworkDone: " << obj.workDone;
+         obj.workToDo << "\nworkDone: " << obj.workDone;
     return strm;
 }//output operator
 
@@ -33,7 +34,7 @@ istream &operator>>(istream &strm, Employee &obj) {
 }//input operator
 
 Employee &Employee::operator=(const Employee &obj) {
-    Person::operator=(static_cast<const Person&>(obj));
+    Person::operator=(static_cast<const Person &>(obj));
     hourWork = obj.hourWork;
     salaryPerHour = obj.salaryPerHour;
     workToDo = obj.workToDo;
@@ -82,10 +83,10 @@ bool Employee::validate() {
 }//id is valid
 
 int Employee::calculateSalary() {
-    return hourWork*salaryPerHour*workDone/workToDo;
+    return hourWork * salaryPerHour * workDone / workToDo;
 }//calculate employee's salary
 
 int Employee::efficiency() {
-    return (workDone*100/workToDo)/hourWork;
+    return (workDone * 100 / workToDo) / hourWork;
 }//employee's efficient
 
