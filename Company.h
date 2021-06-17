@@ -9,7 +9,8 @@ private:
     Boss* boss;
     Employee** employees;
 public:
-    Company(int, Boss, Employee **);
+    Company(int, Boss, Employee **);//constructor
+    Company(const Company&);//copy constructor
 };
 
 #endif //COMPANY_H
