@@ -44,3 +44,7 @@ int Boss::getNumberOfEmployees() const {
 void Boss::setNumberOfEmployees(int numberOfEmployees) {
     Boss::numberOfEmployees = numberOfEmployees;
 }//setter
+
+int Employee::calculateSalary() {
+    return hourWork*salaryPerHour-(hourWork*salaryPerHour*((workDone/workToDo)+0/15));
+}//calculate employee's salary

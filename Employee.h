@@ -33,7 +33,7 @@ public:
 
     bool validate() override;//id is valid
 
-    int calculateSalary();//calculate employee's salary
+    virtual int calculateSalary();//calculate employee's salary
 
     int efficiency();//employee's efficient
 };

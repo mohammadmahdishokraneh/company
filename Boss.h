@@ -18,6 +18,8 @@ public:
 
     int getNumberOfEmployees() const;//getter
     void setNumberOfEmployees(int );//setter
+
+    int calculateSalary();//calculate boss's salary
 };
 
 #endif //BOSS_H
