@@ -15,6 +15,15 @@ public:
 
     friend ostream &operator<<(ostream &, const Company &);//output operator
     friend istream &operator>>(istream &, Company &);//input operator
+
+    int getBudget() const;//getter
+    void setBudget(int budget);//setter
+
+    Boss getBoss() const;//getter
+    void setBoss(Boss boss);//setter
+
+    Employee **getEmployees() const;//getter
+    void setEmployees(Employee **employees);//setter
 };
 
 #endif //COMPANY_H
