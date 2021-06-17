@@ -26,7 +26,8 @@ Company::~Company() {
     delete boss;
 }//destructor
 
-ostream &operator<<(ostream &strm, const Company &obj) {
+ostream &operator<<(ostream &strm, Company &obj) {
+    obj.arrange();
     cout << *obj.boss << endl;
     for (int i = 0; i < obj.boss->getNumberOfEmployees(); ++i) {
         strm << *obj.employees[i] << endl;
@@ -147,3 +148,28 @@ void Company::toSave() {
              this->employees[i]->calculateSalary();
     }
 }//save information
+
+void Company::arrange() {
+    Employee *temp;
+    bool check = false;
+
+    for (int i = 0; i < this->boss->getNumberOfEmployees() && !check; ++i) {
+        check = true;
+        for (int j = 0; j < (this->boss->getNumberOfEmployees() - i - 1); ++j) {
+            if (this->employees[j]->getId().substr(0, 2) > this->employees[j + 1]->getId().substr(0, 2)) {
+                check = false;
+                temp = this->employees[j];
+                this->employees[j] = this->employees[j + 1];
+                this->employees[j + 1] = temp;
+            }
+            if (this->employees[j]->getId().substr(0, 2) == this->employees[j + 1]->getId().substr(0, 2)) {
+                if (this->employees[j]->getName() > this->employees[j + 1]->getName()) {
+                    check = false;
+                    temp = this->employees[j];
+                    this->employees[j] = this->employees[j + 1];
+                    this->employees[j + 1] = temp;
+                }
+            }
+        }
+    }
+}//arrange employees

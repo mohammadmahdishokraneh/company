@@ -14,7 +14,7 @@ public:
     Company(const Company &);//copy constructor
     ~Company();//destructor
 
-    friend ostream &operator<<(ostream &, const Company &);//output operator
+    friend ostream &operator<<(ostream &, Company &);//output operator
     friend istream &operator>>(istream &, Company &);//input operator
 
     int getBudget() const;//getter
@@ -39,6 +39,8 @@ public:
     bool isEnoughBudget();//check the budget
 
     void toSave();//save information
+
+    void arrange();//arrange employees
 };
 
 #endif //COMPANY_H
