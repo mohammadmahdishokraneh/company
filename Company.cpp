@@ -25,3 +25,13 @@ Company::~Company() {
     delete[] employees;
     delete boss;
 }//destructor
+
+ostream &operator<<(ostream &strm,const Company &obj) {
+    cout << obj.boss << endl;
+    for (int i = 0; i < obj.boss->getNumberOfEmployees(); ++i) {
+        strm << *obj.employees[i] << endl;
+    }
+    cout << "budget: ";
+    strm << obj.budget;
+    return strm;
+}//output operator
