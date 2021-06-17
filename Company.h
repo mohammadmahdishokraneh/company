@@ -13,8 +13,8 @@ public:
     Company(const Company &);//copy constructor
     ~Company();//destructor
 
-    friend ostream &operator<<(ostream &,const Company &);//output operator
-    friend istream &operator>>(istream &, Company &);
+    friend ostream &operator<<(ostream &, const Company &);//output operator
+    friend istream &operator>>(istream &, Company &);//input operator
 };
 
 #endif //COMPANY_H
