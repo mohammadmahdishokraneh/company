@@ -72,3 +72,16 @@ void Company::setEmployees(Employee **employees) {
         this->employees[i] = new Employee(*employees[i]);
     }
 }//setter
+
+Employee &Company::maxEfficiency() {
+    int max = this->employees[0]->efficiency();
+    for (int i = 1; i < this->boss->getNumberOfEmployees(); ++i) {
+        if (max > this->employees[i]->efficiency())
+            max = this->employees[i]->efficiency();
+    }
+    for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
+        if (max == this->employees[i]->efficiency())
+            return *this->employees[i];
+    }
+    return *this->employees[0];
+}//find the most efficient employee

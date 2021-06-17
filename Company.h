@@ -24,6 +24,8 @@ public:
 
     Employee **getEmployees() const;//getter
     void setEmployees(Employee **employees);//setter
+
+    Employee& maxEfficiency();//find the most efficient employee
 };
 
 #endif //COMPANY_H
