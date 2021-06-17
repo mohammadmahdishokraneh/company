@@ -10,7 +10,7 @@ private:
     Address address;
 public:
     Person(const string &, const string &, const Address &);//constructor
-//    Person(const Person &);//copy constructor
+    Person(const Person &);//copy constructor
 
     friend ostream &operator<<(ostream &, const Person &);//output operator
     friend istream &operator>>(istream &, Person &);//input operator

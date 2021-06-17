@@ -1,5 +1,11 @@
 #include "Address.h"
 
+Address::Address() {
+    country = "";
+    city = "";
+    street = "";
+}
+
 Address::Address(const string &country, const string &city, const string &street) :
         country(country), city(city), street(street) {}
 //constructor

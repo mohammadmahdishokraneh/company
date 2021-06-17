@@ -3,11 +3,11 @@
 Person::Person(const string &name, const string &id, const Address &address) :
         name(name), id(id), address(address) { validate(); }//constructor
 
-//Person::Person(const Person &obj) {
-//    setName(obj.name);
-//    setId(obj.id);
-//    setAddress(obj.address);
-//}//copy constructor
+Person::Person(const Person &obj) {
+    this->name = obj.name;
+    this->id = obj.id;
+    this->address = obj.address;
+}//copy constructor
 
 ostream &operator<<(ostream &strm, const Person &obj) {
     strm << "name: " << obj.name << "\nid: " << obj.id << "\naddress: " << obj.address;
