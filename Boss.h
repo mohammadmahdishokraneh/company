@@ -13,6 +13,11 @@ public:
 
     friend ostream& operator << (ostream&, const Boss&);//output operator
     friend istream& operator >> (istream&, Boss&);//input operator
+
+    Boss& operator=(const Boss&);//assignment operator
+
+    int getNumberOfEmployees() const;//getter
+    void setNumberOfEmployees(int );//setter
 };
 
 #endif //BOSS_H

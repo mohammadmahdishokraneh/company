@@ -30,3 +30,17 @@ istream &operator>>(istream &strm, Boss &obj) {
     strm >> obj.workDone;
     return strm;
 }//input operator
+
+Boss &Boss::operator=(const Boss &obj) {
+    Employee::operator=(obj);
+    numberOfEmployees = obj.numberOfEmployees;
+    return *this;
+}//assignment operator
+
+int Boss::getNumberOfEmployees() const {
+    return numberOfEmployees;
+}//getter
+
+void Boss::setNumberOfEmployees(int numberOfEmployees) {
+    Boss::numberOfEmployees = numberOfEmployees;
+}//setter
