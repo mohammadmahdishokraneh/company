@@ -32,6 +32,8 @@ public:
 //    void  changeBoss();
 
     void gift();//gift for employees
+
+    void payForService();
 };
 
 #endif //COMPANY_H

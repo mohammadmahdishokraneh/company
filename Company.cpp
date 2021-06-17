@@ -112,3 +112,11 @@ void Company::gift() {
         delete[] ch;
     }
 }//gift for employees
+
+void Company::payForService() {
+    for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
+        if (strcmp(this->employees[i]->getAddress().getCity().c_str(), "tehran") != 0 &&
+                strcmp(this->employees[i]->getAddress().getCity().c_str(), "Tehran") != 0 )
+            this->employees[i]->setHourWork(this->employees[i]->getHourWork()+7);
+    }
+}
