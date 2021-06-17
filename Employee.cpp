@@ -1,13 +1,11 @@
 #include "Employee.h"
 
-Employee::Employee() : Person() {hourWork = 0; salaryPerHour = 0; workToDo = 0; workDone = 0; validate();}//constructor no_arg
-
-Employee::Employee(const std::basic_string<char> &name, const std::basic_string<char> &id, const Address &address, int hourWork, int salaryPerHour,
+Employee::Employee(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour,
                    int workToDo, int workDone) : Person(name, id, address), hourWork(hourWork),
                                                  salaryPerHour(salaryPerHour), workToDo(workToDo), workDone(workDone) {validate();}
 //constructor
 
-Employee::Employee(const Employee &obj) : Person(obj) {
+Employee::Employee(const Employee &obj) : Person(static_cast<const Person &>(obj)) {
     this->hourWork = obj.hourWork;
     this->salaryPerHour = obj.salaryPerHour;
     this->workToDo = obj.workToDo;
@@ -15,14 +13,14 @@ Employee::Employee(const Employee &obj) : Person(obj) {
 }//copy constructor
 
 ostream &operator<<(ostream &strm, const Employee &obj) {
-    strm << static_cast<const Person &>(obj);
+    cout << static_cast<const Person &>(obj) << endl;
     strm << "hourWork: " << obj.hourWork << "\nsalaryPerHour: " << obj.salaryPerHour << "\nworkToDo: " <<
-    obj.workToDo << "\nworkDone" << obj.workDone << endl;
+    obj.workToDo << "\nworkDone: " << obj.workDone;
     return strm;
 }//output operator
 
 istream &operator>>(istream &strm, Employee &obj) {
-    strm >> static_cast<Person &>(obj);
+    cin >> static_cast<Person &>(obj);
     cout << "hourWork: ";
     strm >> obj.hourWork;
     cout << "salaryPerHour: ";
@@ -35,7 +33,7 @@ istream &operator>>(istream &strm, Employee &obj) {
 }//input operator
 
 Employee &Employee::operator=(const Employee &obj) {
-    Person::operator=(obj);
+    Person::operator=(static_cast<const Person&>(obj));
     hourWork = obj.hourWork;
     salaryPerHour = obj.salaryPerHour;
     workToDo = obj.workToDo;
@@ -76,19 +74,15 @@ void Employee::setWorkDone(int workDone) {
 }//setter
 
 bool Employee::validate() {
-    char id1[10];
-    strcpy(id1, id.c_str());
-
-    if (id1[2] != '*') {
+    if (this->getId().c_str()[2] != '*') {
         cout << "invalid id" << endl;
         exit(0);
     }
-
-    return Person::validate(id1);
+    return Person::validate();
 }//id is valid
 
 int Employee::calculateSalary() {
-    return hourWork*salaryPerHour-(hourWork*salaryPerHour*workDone/workToDo);
+    return hourWork*salaryPerHour*workDone/workToDo;
 }//calculate employee's salary
 
 int Employee::efficiency() {

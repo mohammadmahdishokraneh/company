@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Address.cpp" "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/soal_2.dir/Address.cpp.o"
   "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Boss.cpp" "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/soal_2.dir/Boss.cpp.o"
+  "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Company.cpp" "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/soal_2.dir/Company.cpp.o"
   "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Employee.cpp" "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/soal_2.dir/Employee.cpp.o"
   "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Person.cpp" "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/soal_2.dir/Person.cpp.o"
   "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/main.cpp" "/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/cmake-build-debug/CMakeFiles/soal_2.dir/main.cpp.o"

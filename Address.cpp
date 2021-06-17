@@ -1,9 +1,5 @@
 #include "Address.h"
 
-Address::Address() : country(""), city(""),
-                     street("") {}
-//constructor no_arg
-
 Address::Address(const string &country, const string &city, const string &street) :
         country(country), city(city), street(street) {}
 //constructor
@@ -14,8 +10,8 @@ Address::Address(const Address&obj) {
     this->street = obj.street;
 }
 
-ostream &operator<<(ostream &strm, Address &obj) {
-    strm << obj.country << "-" << obj.city << "-" << obj.street << endl;
+ostream &operator<<(ostream &strm, const Address &obj) {
+    strm << obj.country << "-" << obj.city << "-" << obj.street;
     return strm;
 }//output operator
 

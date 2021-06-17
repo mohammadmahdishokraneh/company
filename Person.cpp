@@ -1,22 +1,16 @@
 #include "Person.h"
 
-Person::Person() : name(""), id("") {
-    address.setCountry("");
-    address.setCity("");
-    address.setStreet("");
-}//constructor no_arg
-
 Person::Person(const string &name, const string &id, const Address &address) :
-        name(name), id(id), address(address) {}//constructor
+        name(name), id(id), address(address) {validate();}//constructor
 
-Person::Person(const Person &obj) {
-    this->name = obj.name;
-    this->id = obj.id;
-    this->address = obj.address;
-}//copy constructor
+//Person::Person(const Person &obj) {
+//    setName(obj.name);
+//    setId(obj.id);
+//    setAddress(obj.address);
+//}//copy constructor
 
-ostream &operator<<(ostream &strm, Person &obj) {
-    strm << "name: " << obj.name << "\nid: " << obj.id << "\naddress: " << obj.address << endl;
+ostream &operator<<(ostream &strm, const Person &obj) {
+    strm << "name: " << obj.name << "\nid: " << obj.id << "\naddress: " << obj.address;
     return strm;
 }//output operator
 
@@ -44,6 +38,7 @@ const string &Person::getId() const {
 
 void Person::setId(const string &id) {
     Person::id = id;
+    validate();
 }//setter
 
 const Address &Person::getAddress() const {
@@ -63,6 +58,40 @@ Person &Person::operator=(const Person &obj) {
 }//assignment operator
 
 bool Person::validate() {
+    char* ch = new char[10];
+    strcpy(ch, id.c_str());
 
-    return false;
+    if (id.length()<8 || id.length()>10){
+        cout << "invalid id" << endl;
+        delete[] ch;
+        exit(0);
+    }
+    if (ch[0] != '9' && ch[0] != '8') {
+        cout << "invalid id" << endl;
+        delete[] ch;
+        exit(0);
+    }
+    if (ch[0] == '8'){
+        if (ch[1]< '4' || ch[1]>'9'){
+            cout << "invalid id" << endl;
+            delete[] ch;
+            exit(0);
+        }
+    }
+    for (int i = id.length()-1; i > id.length()-6; --i) {
+        if (ch[i] >= '4' && ch[i] <= '6' && ch[i] > '9' && ch[i] < '0'){
+            cout << "invalid id" << endl;
+            delete[] ch;
+            exit(0);
+        }
+    }
+    for (int i = id.length()-6; i > 1; --i) {
+        if (ch[i] > '0' && ch[i] < '9'){
+            cout << "invalid id" << endl;
+            delete[] ch;
+            exit(0);
+        }
+    }
+    delete[] ch;
+    return true;
 }//id is valid

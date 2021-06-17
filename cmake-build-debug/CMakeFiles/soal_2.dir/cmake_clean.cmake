@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/soal_2.dir/Address.cpp.o"
   "CMakeFiles/soal_2.dir/Boss.cpp.o"
+  "CMakeFiles/soal_2.dir/Company.cpp.o"
   "CMakeFiles/soal_2.dir/Employee.cpp.o"
   "CMakeFiles/soal_2.dir/Person.cpp.o"
   "CMakeFiles/soal_2.dir/main.cpp.o"

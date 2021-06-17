@@ -1,38 +1,29 @@
 #include "Boss.h"
 
-Boss::Boss() : Employee() {numberOfEmployees = 0;}//constructor no_arg
-
-Boss::Boss(const std::basic_string<char> &name, const std::basic_string<char> &id, const Address &address,
+Boss::Boss(const string &name, const string &id, const Address &address,
            int hourWork, int salaryPerHour, int workToDo, int workDone, int numberOfEmployees) :
            Employee(name, id, address, hourWork, salaryPerHour, workToDo, workDone),
            numberOfEmployees(numberOfEmployees) {}//constructor
 
-Boss::Boss(const Boss &obj) : Employee(obj) {
+Boss::Boss(const Boss &obj) : Employee(static_cast<const Employee &>(obj)) {
     numberOfEmployees = obj.numberOfEmployees;
 }//copy constructor
 
 ostream &operator<<(ostream &strm, const Boss &obj) {
-    strm << static_cast<const Person &>(obj);
-    strm << "hourWork: " << obj.getHourWork() << "\nsalaryPerHour: " << obj.getSalaryPerHour() << "\nworkToDo: " <<
-         obj.getWorkToDo() << "\nworkDone" << obj.getWorkDone() << endl;
+    strm << static_cast<const Employee &>(obj)<< endl;
+    strm << "number of employee: " << obj.numberOfEmployees;
     return strm;
 }//output operator
 
 istream &operator>>(istream &strm, Boss &obj) {
-    strm >> static_cast<Person &>(obj);
-    cout << "hourWork: ";
-    strm >> obj.hourWork;
-    cout << "salaryPerHour: ";
-    strm >> obj.salaryPerHour;
-    cout << "workToDo: ";
-    strm >> obj.workToDo;
-    cout << "workDone: ";
-    strm >> obj.workDone;
+    strm >> static_cast<Employee &>(obj);
+    cout << "number of employee: ";
+    strm >> obj.numberOfEmployees;
     return strm;
 }//input operator
 
 Boss &Boss::operator=(const Boss &obj) {
-    Employee::operator=(obj);
+    Employee::operator=(static_cast<const Employee &>(obj));
     numberOfEmployees = obj.numberOfEmployees;
     return *this;
 }//assignment operator
@@ -45,6 +36,10 @@ void Boss::setNumberOfEmployees(int numberOfEmployees) {
     Boss::numberOfEmployees = numberOfEmployees;
 }//setter
 
-int Employee::calculateSalary() {
-    return hourWork*salaryPerHour-(hourWork*salaryPerHour*((workDone/workToDo)+0/15));
+int Boss::calculateSalary() {
+    int hourWork = this->getHourWork();
+    int salaryPerHour = this->getSalaryPerHour();
+    int workDone = this->getWorkDone();
+    int workToDo = this->getWorkToDo();
+    return hourWork*salaryPerHour*((workDone*100/workToDo)+15)/100;
 }//calculate employee's salary

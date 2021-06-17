@@ -1,10 +1,7 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include <iostream>
 #include "Address.h"
-
-using namespace std;
 
 class Person {
 private:
@@ -12,11 +9,10 @@ private:
     string id;
     Address address;
 public:
-    Person();//constructor no_arg
     Person(const string &, const string &, const Address &);//constructor
-    Person(const Person &);//copy constructor
+//    Person(const Person &);//copy constructor
 
-    friend ostream &operator<<(ostream &, Person &);//output operator
+    friend ostream &operator<<(ostream &, const Person &);//output operator
     friend istream &operator>>(istream &, Person &);//input operator
 
     const string &getName() const;//getter

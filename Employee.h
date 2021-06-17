@@ -10,7 +10,6 @@ private:
     int workToDo;
     int workDone;
 public:
-    Employee();//constructor no_arg
     Employee(const string &, const string &, const Address &, int, int, int, int );//constructor
     Employee(const Employee &);//copy constructor
 

@@ -7,7 +7,6 @@ class Boss : public Employee{
 private:
     int numberOfEmployees;
 public:
-    Boss();//constructor no_arg
     Boss(const string &, const string &, const Address &, int, int, int, int, int);//constructor
     Boss(const Boss&);//copy constructor
 

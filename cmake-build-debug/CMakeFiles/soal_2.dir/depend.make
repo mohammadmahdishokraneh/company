@@ -10,6 +10,13 @@ CMakeFiles/soal_2.dir/Boss.cpp.o: ../Boss.h
 CMakeFiles/soal_2.dir/Boss.cpp.o: ../Employee.h
 CMakeFiles/soal_2.dir/Boss.cpp.o: ../Person.h
 
+CMakeFiles/soal_2.dir/Company.cpp.o: ../Address.h
+CMakeFiles/soal_2.dir/Company.cpp.o: ../Boss.h
+CMakeFiles/soal_2.dir/Company.cpp.o: ../Company.cpp
+CMakeFiles/soal_2.dir/Company.cpp.o: ../Company.h
+CMakeFiles/soal_2.dir/Company.cpp.o: ../Employee.h
+CMakeFiles/soal_2.dir/Company.cpp.o: ../Person.h
+
 CMakeFiles/soal_2.dir/Employee.cpp.o: ../Address.h
 CMakeFiles/soal_2.dir/Employee.cpp.o: ../Employee.cpp
 CMakeFiles/soal_2.dir/Employee.cpp.o: ../Employee.h
@@ -19,5 +26,9 @@ CMakeFiles/soal_2.dir/Person.cpp.o: ../Address.h
 CMakeFiles/soal_2.dir/Person.cpp.o: ../Person.cpp
 CMakeFiles/soal_2.dir/Person.cpp.o: ../Person.h
 
+CMakeFiles/soal_2.dir/main.cpp.o: ../Address.h
+CMakeFiles/soal_2.dir/main.cpp.o: ../Boss.h
+CMakeFiles/soal_2.dir/main.cpp.o: ../Employee.h
+CMakeFiles/soal_2.dir/main.cpp.o: ../Person.h
 CMakeFiles/soal_2.dir/main.cpp.o: ../main.cpp
 

@@ -92,6 +92,12 @@
 		<Unit filename="/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Boss.h">
 			<Option target="soal_2"/>
 		</Unit>
+		<Unit filename="/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Company.cpp">
+			<Option target="soal_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Company.h">
+			<Option target="soal_2"/>
+		</Unit>
 		<Unit filename="/cygdrive/f/univercity/term 2/AP !/takalif/tamrin 6/soal 2/Employee.cpp">
 			<Option target="soal_2"/>
 		</Unit>
