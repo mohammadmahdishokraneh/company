@@ -58,7 +58,7 @@ Boss Company::getBoss() const {
     return *boss;
 }//getter
 
-void Company::setBoss(Boss boss) {
+void Company::setBoss(Boss &boss) {
     Company::boss = new Boss(boss);
 }//setter
 
@@ -94,21 +94,30 @@ double Company::averageEfficiency() {
     return average / this->boss->getNumberOfEmployees();
 }//average efficiency of employees
 
-//void Company::changeBoss() {
-//    if (this->boss->efficiency() < 40){
-//        Employee employee = this->maxEfficiency();
-//
-//    }
-//}
+void Company::changeOfBoss() {
+    Employee newBoss = maxEfficiency();
+    if (this->boss->efficiency() < 40) {
+        for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
+            if (*this->employees[i] == newBoss) {
+                int numberOfEmployees = this->boss->getNumberOfEmployees();
+                Employee temp = *this->employees[i];
+                *this->employees[i] = static_cast<Employee>(*this->boss);
+                this->setBoss(static_cast<Boss &>(temp));
+                this->boss->setNumberOfEmployees(numberOfEmployees);
+                break;
+            }
+        }
+    }
+}//replace the boss with the best employee
 
 void Company::gift() {
     for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
-        char * ch= new char[10];
+        char *ch = new char[10];
         strcpy(ch, this->employees[i]->getId().c_str());
         if (ch[0] == '8')
-            this->employees[i]->setHourWork(this->employees[i]->getHourWork()+5);
+            this->employees[i]->setHourWork(this->employees[i]->getHourWork() + 5);
         if (*this->employees[i] == this->maxEfficiency())
-            this->employees[i]->setHourWork(this->employees[i]->getHourWork()+10);
+            this->employees[i]->setHourWork(this->employees[i]->getHourWork() + 10);
         delete[] ch;
     }
 }//gift for employees
@@ -116,7 +125,21 @@ void Company::gift() {
 void Company::payForService() {
     for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
         if (strcmp(this->employees[i]->getAddress().getCity().c_str(), "tehran") != 0 &&
-                strcmp(this->employees[i]->getAddress().getCity().c_str(), "Tehran") != 0 )
-            this->employees[i]->setHourWork(this->employees[i]->getHourWork()+7);
+            strcmp(this->employees[i]->getAddress().getCity().c_str(), "Tehran") != 0)
+            this->employees[i]->setHourWork(this->employees[i]->getHourWork() + 7);
     }
 }
+
+bool Company::isEnoughBudget() {
+    int sum = this->boss->calculateSalary();
+    for (int i = 0; i < this->boss->getNumberOfEmployees(); ++i) {
+        sum += this->employees[i]->calculateSalary();
+    }
+    if (sum <= this->budget)
+        return true;
+    return false;
+}//check the budget
+
+void Company::toSave() {
+
+}//save information

@@ -20,7 +20,7 @@ public:
     void setBudget(int budget);//setter
 
     Boss getBoss() const;//getter
-    void setBoss(Boss boss);//setter
+    void setBoss(Boss& boss);//setter
 
     Employee **getEmployees() const;//getter
     void setEmployees(Employee **employees);//setter
@@ -29,11 +29,15 @@ public:
 
     double averageEfficiency();//average efficiency of employees
 
-//    void  changeBoss();
+    void  changeOfBoss();//replace the boss with the best employee
 
     void gift();//gift for employees
 
     void payForService();
+
+    bool isEnoughBudget();//check the budget
+
+    void toSave();//save information
 };
 
 #endif //COMPANY_H
